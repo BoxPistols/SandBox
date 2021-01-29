@@ -10,7 +10,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <Button variant="primary">import SB</Button>
+        <Button variant="primary">import by Story</Button>
       </header>
     </div>
   );
