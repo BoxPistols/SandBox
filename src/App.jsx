@@ -9,6 +9,8 @@ function App() {
     <div className="App">
       <Header title="Props String" />
       <header className="App-header">
+        <Btn color="tomato" text="Subit" />
+        <Btn color="teal" text="Button!" />
         <Btn />
         <img src={logo} className="App-logo" alt="logo" />
         <p>

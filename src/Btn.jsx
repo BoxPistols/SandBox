@@ -1,12 +1,27 @@
 // import React from 'react'
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 
-const Btn = () => {
+const Btn = ({ color, text }) => {
   return (
     <>
-      <button>Btn</button>
+      <button
+        style={{ backgroundColor: color }}
+        className="btn"
+      >
+        {text}
+      </button>
     </>
   )
+}
+
+Btn.defaultProps = {
+  color: 'steelblue',
+  text: 'Btn Button',
+}
+
+Btn.propTypes = {
+  color: PropTypes.string,
+  text: PropTypes.string,
 }
 
 export default Btn
