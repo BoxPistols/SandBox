@@ -5,10 +5,15 @@ import './App.css'
 // functional Component
 const Header = ({ title }) => {
   return (
-    <header>
-      <h1>{title}</h1>
+    <header className="headerStyle">
+      <h1 style={headingStyle}>{title}</h1>
     </header>
   )
+}
+
+// css in js
+const headingStyle = {
+  color: 'teal',
 }
 
 Header.defaultProps = {
