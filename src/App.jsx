@@ -49,11 +49,7 @@ function App() {
          */}
         <Tasks list={tasksList} onDelete={delTask} />
         {/* <Btn color="tomato" text="Subit" /> */}
-        <Btn
-          color="teal"
-          text="Button!"
-          onClick={onAction}
-        />
+        <Btn color="teal" text="Button!" />
         {/* <Btn onClick={onAction2} /> */}
         <img src={logo} className="App-logo" alt="logo" />
         <p>

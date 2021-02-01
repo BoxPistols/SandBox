@@ -7,7 +7,10 @@ const Task = ({ obj, onDelete }) => {
       <p className="text">{obj.text}</p>
       <p className="text">{obj.date}</p>
       <p className="close">
-        <FaWindowClose color="tomato" onClick={onDelete} />
+        <FaWindowClose
+          color="tomato"
+          onClick={() => onDelete(obj.id)}
+        />
       </p>
     </div>
   )
