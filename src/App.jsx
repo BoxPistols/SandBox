@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
 import Button from './stories/components/Button'
@@ -12,11 +13,33 @@ function App() {
   // const onAction2 = () => {
   //   console.log('yyy')
   // }
+  // array function useState([...])
+  const [tasks, setTasks] = useState([
+    {
+      id: 1,
+      text: 'text Lorem, ipsum 1-task',
+      day: '2021 1 31',
+      reminder: true,
+    },
+    {
+      id: 2,
+      text: 'text Lorem, ipsum 2-task',
+      day: '2021 2 31',
+      reminder: true,
+    },
+    {
+      id: 3,
+      text: 'text Lorem, ipsum 3-task',
+      day: '2021 3 31',
+      reminder: false,
+    },
+  ])
+
   return (
     <div className="App">
       <Header title="Props String" />
       <header className="App-header">
-        <Tasks />
+        <Tasks tasks={tasks} />
         {/* <Btn color="tomato" text="Subit" /> */}
         <Btn
           color="teal"
