@@ -22,29 +22,13 @@ const tasks = [
   },
 ]
 
-// const getTask = {}
-const Tasks = () => {
-  return (
-    <>
-      <h2>Tasks</h2>
-      {/* TODO: Retry to Map */}
-      {tasks.map((task) => (
-        <div style={{ display: 'inline-flex' }}>
-          <p>{task.id}</p>
-          <p>{task.text}</p>
-          <p>{task.reminder}</p>
-          <p>{task.day}</p>
-        </div>
-      ))}
-
-      <ul>
-        <li></li>
-      </ul>
-    </>
-  )
-}
-
-// Tasks.defaultProps = {}
-// Tasks.propTypes = {}
+// map to tasksX
+const Tasks = () =>
+  tasks.map((task) => (
+    <div key={task.id} className="tasks fx-in fx-ai-c">
+      <p>{task.text}</p>
+      <p className="day">{task.day}</p>
+    </div>
+  ))
 
 export default Tasks

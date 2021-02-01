@@ -58,3 +58,35 @@ header > h1 {
   font-weight: 600;
   margin: 0;
 }
+
+/* Utility / Block */
+.fx {
+  display: flex;
+}
+
+.fx-in {
+  display: inline-flex;
+}
+
+.fx-c {
+  justify-content: center;
+  align-items: center;
+}
+
+.fx-ai-c {
+  align-items: center;
+}
+
+.fx-ai-e {
+  align-items: flex-end;
+}
+
+.fx-jc-c {
+  justify-content: center;
+}
+
+/* Component */
+.tasks .day {
+  font-size: 12px;
+  margin-left: 1em;
+}
