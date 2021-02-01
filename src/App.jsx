@@ -14,7 +14,7 @@ function App() {
   //   console.log('yyy')
   // }
   // array function useState([...])
-  const [tasks, setTasks] = useState([
+  const [tasksList, setTasks] = useState([
     {
       id: 1,
       text: 'text Lorem, ipsum 1-task',
@@ -39,7 +39,11 @@ function App() {
     <div className="App">
       <Header title="Props String" />
       <header className="App-header">
-        <Tasks tasks={tasks} />
+        {/*
+         * tasks: propsName
+         * tasksList: useState Array Object&FunctoinName
+         */}
+        <Tasks tasks={tasksList} />
         {/* <Btn color="tomato" text="Subit" /> */}
         <Btn
           color="teal"
