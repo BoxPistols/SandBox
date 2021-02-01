@@ -1,12 +1,16 @@
+// style
+// import { FaWindowClose } from 'react-icons/fa'
 import Task from './Task'
 
-const Tasks = ({ tasks }) => {
+// map from Task
+const Tasks = ({ list }) => {
   return (
     <>
-      {tasks.map((task) => (
-        <Task key={task.id} taskObj={task} />
+      {list.map((task) => (
+        <Task key={task.id} obj={task}></Task>
       ))}
     </>
   )
 }
+
 export default Tasks

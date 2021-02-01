@@ -43,7 +43,7 @@ function App() {
          * tasks: propsName
          * tasksList: useState Array Object&FunctoinName
          */}
-        <Tasks tasks={tasksList} />
+        <Tasks list={tasksList} />
         {/* <Btn color="tomato" text="Subit" /> */}
         <Btn
           color="teal"

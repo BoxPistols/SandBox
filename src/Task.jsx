@@ -1,10 +1,11 @@
 import { FaWindowClose } from 'react-icons/fa'
 
-const Task = ({ taskObj }) => {
+// Base Style Comp
+const Task = ({ obj }) => {
   return (
     <div className="tasks fx-in fx-c">
-      <p className="tex">{taskObj.text}</p>
-      <p className="day">{taskObj.day}</p>
+      <p className="text">{obj.text}</p>
+      <p className="text">{obj.date}</p>
       <p className="close">
         <FaWindowClose color="tomato" />
       </p>
