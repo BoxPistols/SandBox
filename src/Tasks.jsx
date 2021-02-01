@@ -3,14 +3,14 @@
 import Task from './Task'
 
 // map from Task
-const Tasks = ({ list, onDelete }) => {
+const Tasks = ({ list, clickId }) => {
   return (
     <>
       {list.map((task) => (
         <Task
           key={task.id}
           obj={task}
-          onDelete={onDelete}
+          clickId={clickId} // Relay on Task Click Work
         ></Task>
       ))}
     </>

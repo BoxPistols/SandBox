@@ -1,18 +1,12 @@
 import { useState } from 'react'
-import logo from './logo.svg'
+// import logo from './logo.svg'
 import './App.css'
 import Button from './stories/components/Button'
 import Header from './Header'
-import Btn from './Btn'
+// import Btn from './Btn'
 import Tasks from './Tasks'
 
 function App() {
-  const onAction = () => {
-    console.log('xxx')
-  }
-  // const onAction2 = () => {
-  //   console.log('yyy')
-  // }
   // array function useState([...])
   const [tasksList, setTasks] = useState([
     {
@@ -35,10 +29,9 @@ function App() {
     },
   ])
 
-  const delTask = (id) => {
-    console.log('del', id)
+  const onSearchID = (x) => {
+    console.log('on:', x)
   }
-
   return (
     <div className="App">
       <Header title="Props String" />
@@ -47,11 +40,12 @@ function App() {
          * tasks: propsName
          * tasksList: useState Array Object&FunctoinName
          */}
-        <Tasks list={tasksList} onDelete={delTask} />
+        {/* onClickID(id) <- obj.id from Task */}
+        <Tasks list={tasksList} clickId={onSearchID} />
         {/* <Btn color="tomato" text="Subit" /> */}
-        <Btn color="teal" text="Button!" />
+        {/* <Btn color="teal" text="Button!" /> */}
         {/* <Btn onClick={onAction2} /> */}
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
           <code>π</code>
         </p>
