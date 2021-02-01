@@ -35,6 +35,10 @@ function App() {
     },
   ])
 
+  const delTask = (id) => {
+    console.log('del', id)
+  }
+
   return (
     <div className="App">
       <Header title="Props String" />
@@ -43,7 +47,7 @@ function App() {
          * tasks: propsName
          * tasksList: useState Array Object&FunctoinName
          */}
-        <Tasks list={tasksList} />
+        <Tasks list={tasksList} onDelete={delTask} />
         {/* <Btn color="tomato" text="Subit" /> */}
         <Btn
           color="teal"
