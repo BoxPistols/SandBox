@@ -29,9 +29,11 @@ function App() {
     },
   ])
 
-  const onSearchID = (x) => {
-    console.log('on:', x)
+  // Delete Self List // set not self all component = self delete
+  const deleteTask = (x) => {
+    setTasks(tasksList.filter((task) => task.id !== x))
   }
+
   return (
     <div className="App">
       <Header title="Props String" />
@@ -41,14 +43,18 @@ function App() {
          * tasksList: useState Array Object&FunctoinName
          */}
         {/* onClickID(id) <- obj.id from Task */}
-        <Tasks list={tasksList} clickId={onSearchID} />
+        {tasksList.length > 0 ? (
+          <Tasks list={tasksList} clickId={deleteTask} />
+        ) : (
+          <h3>Do Append Task!</h3>
+        )}
         {/* <Btn color="tomato" text="Subit" /> */}
         {/* <Btn color="teal" text="Button!" /> */}
         {/* <Btn onClick={onAction2} /> */}
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <p>
+        <h2>
           <code>π</code>
-        </p>
+        </h2>
         <Button variant="primary">import by Story</Button>
       </header>
     </div>

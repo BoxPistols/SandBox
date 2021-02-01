@@ -1,7 +1,7 @@
 import { FaWindowClose } from 'react-icons/fa'
 
 // Base Style Comp
-const Task = ({ obj, clickId }) => {
+const Task = ({ obj, clickId, nothing }) => {
   return (
     <div className="tasks fx-in fx-c">
       <p className="text">{obj.text}</p>
@@ -9,7 +9,7 @@ const Task = ({ obj, clickId }) => {
       <p className="close">
         <FaWindowClose
           color="tomato"
-          onClick={() => clickId(obj.day)} // include setting -> Click: ArrayObj(value)
+          onClick={() => clickId(obj.id)} // include setting -> Click: ArrayObj(value)
         />
       </p>
     </div>

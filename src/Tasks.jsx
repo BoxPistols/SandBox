@@ -3,7 +3,7 @@
 import Task from './Task'
 
 // map from Task
-const Tasks = ({ list, clickId }) => {
+const Tasks = ({ list, clickId, nothing }) => {
   return (
     <>
       {list.map((task) => (
