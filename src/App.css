@@ -86,7 +86,21 @@ header > h1 {
 }
 
 /* Component */
+.tasks {
+  background-color: #222;
+  margin: 4px;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4em;
+}
+.tasks > p {
+  margin: 0;
+}
 .tasks .day {
   font-size: 12px;
   margin-left: 1em;
+}
+.tasks p.close {
+  font-size: 1.4rem;
+  margin: 0 0 0.2rem 0.8rem;
+  cursor: pointer;
 }
