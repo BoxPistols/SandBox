@@ -30,10 +30,10 @@ function App() {
   ])
 
   // Delete Self List // set not self all component = self delete
-  const deleteTask = (x) => {
-    setTasks(tasksList.filter((task) => task.id !== x))
+  const deleteTask = (id) => {
+    // set id(taskList)
+    setTasks(tasksList.filter((t) => t.id !== id)) // useState(ArrayVal.filter(...self))
   }
-
   return (
     <div className="App">
       <Header title="Props String" />
