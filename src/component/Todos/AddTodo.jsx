@@ -12,10 +12,18 @@ export default class AddTodo extends Component {
 		const title = e.target.value
 		this.setState({ title: title })
 	}
+	handleSubmit = (e) => {
+		e.preventDefault()
+		alert(this.state.title)
+	}
 	render() {
 		return (
 			<div>
-				<form className='fx m-auto' style={{ maxWidth: '800px' }}>
+				<form
+					onSubmit={this.handleSubmit}
+					className='fx m-auto'
+					style={{ maxWidth: '800px' }}
+				>
 					<input
 						className='form-control'
 						type='text'
