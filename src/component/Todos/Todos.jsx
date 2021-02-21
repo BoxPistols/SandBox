@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import List from './List'
+import AddTodo from './AddTodo'
 
 export class Todos extends Component {
 	constructor(props) {
@@ -17,6 +18,7 @@ export class Todos extends Component {
 		return (
 			<div className='Todos'>
 				<h1>Todo App</h1>
+				<AddTodo />
 				<List todos={this.state.todos} />
 			</div>
 		)
