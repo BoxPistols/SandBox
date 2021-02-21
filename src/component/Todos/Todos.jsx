@@ -1,21 +1,32 @@
 import React, { Component } from 'react'
 
-function Todo(params) {
-	return <li>ToDo</li>
+const Todo_Params = [
+    {   title: "AAAA"
+    }
+]
+function Todo(props) {
+	return <li>in ToDo</li>
 }
 
-function TodoList(params) {
-	return (
-		<ul>
-			<Todo />
-		</ul>
-	)
+// propsオブジェクトにデータ格納
+function TodoList(props) {
+    const todoList = props.todos.map((todo, index) =>{
+    return(
+        <Todo key={index}/>
+        )
+    })
+    return (
+        <div className="fx fx-col ">
+            <h3>List</h3>
+            <ul className="fx fx-col">{todoList}</ul>
+        </div>
+    )
 }
 
-function TodoForm(params) {
+function TodoForm(props) {
 	return (
 		<div className='container'>
-			<div className='row'>
+			<div className='row fx fx-col'>
 				<TodoList />
 				<form>
 					<label htmlFor='label'>
@@ -33,7 +44,7 @@ export class Todos extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			todos: [],
+			todos: Todo_Params,
 			newTodo: '',
 		}
 	}
@@ -45,6 +56,9 @@ export class Todos extends Component {
 					<div className='todo'>
 						<h1>Todo App</h1>
 						<TodoForm />
+                        <TodoList
+                        todos={this.state.todos}
+                        />
 					</div>
 				</div>
 			</div>

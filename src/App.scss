@@ -25,6 +25,9 @@ header > h1 {
 .fx {
 	display: flex;
 }
+.fx-col {
+	flex-direction: column;
+}
 
 .fx-in {
 	display: inline-flex;

@@ -49,10 +49,15 @@ function TodoList(params) {
 }
 ```
 
-## Todoコンポーネントの作成
+## 配列データの引数設置
 
 ```jsx
-function Todo(params) {
-	retuen(<li>ToDo</li>)
-}
+export class Todos extends Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			todos: TODO_PARAMS, // <- Add
+			newTodo: '',
+		}
+	}
 ```
