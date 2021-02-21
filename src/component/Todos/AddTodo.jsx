@@ -8,6 +8,10 @@ export default class AddTodo extends Component {
 		}
 	}
 
+	handleChange = (e) => {
+		const title = e.target.value
+		this.setState({ title: title })
+	}
 	render() {
 		return (
 			<div>
@@ -17,6 +21,7 @@ export default class AddTodo extends Component {
 						type='text'
 						placeholder='.form-control'
 						value={this.state.title}
+						onChange={this.handleChange}
 					/>
 					<button type='submit' className='btn'>
 						Add
