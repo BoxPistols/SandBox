@@ -1,5 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-export function Todos() {
-	return <div>Todo!!</div>
+export class Todos extends Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			todos: [],
+			newTodo: '',
+		}
+	}
+
+	render() {
+		return <div className='todo'>Todo</div>
+	}
 }
