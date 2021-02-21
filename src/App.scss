@@ -1,107 +1,68 @@
+@import "./css/Bootstrap/bootstrap.min.css";
 
 /* IE don't move, other browser is move */
 :root {
-  --main-bg-color: #282c34;
-}
-
-.App {
-  text-align: center;
-  font-family: 'Futura';
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: var(--main-bg-color);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	--main-bg-color: #282c34;
 }
 
 code {
-  /* font-size: 24px; */
-  font-size: clamp(20px, 12vw, 48px);
+	/* font-size: 24px; */
+	font-size: clamp(20px, 12vw, 48px);
 }
 
 /* Header */
 header > h1 {
-  color: white;
-  background-color: var(--main-bg-color);
-  border-bottom: 1px solid tomato;
-  padding: 8px;
-  font-size: 2.4vw;
-  font-weight: 600;
-  margin: 0;
+	color: white;
+	background-color: var(--main-bg-color);
+	border-bottom: 1px solid tomato;
+	padding: 8px;
+	font-size: 2.4vw;
+	font-weight: 600;
+	margin: 0;
 }
 
 /* Utility / Block */
 .fx {
-  display: flex;
+	display: flex;
 }
 
 .fx-in {
-  display: inline-flex;
+	display: inline-flex;
 }
 
 .fx-c {
-  justify-content: center;
-  align-items: center;
+	justify-content: center;
+	align-items: center;
 }
 
 .fx-ai-c {
-  align-items: center;
+	align-items: center;
 }
 
 .fx-ai-e {
-  align-items: flex-end;
+	align-items: flex-end;
 }
 
 .fx-jc-c {
-  justify-content: center;
+	justify-content: center;
 }
 
 /* Component */
 .tasks {
-  background-color: #222;
-  margin: 4px;
-  padding: 0.5rem 1rem;
-  border-radius: 0.4em;
+	background-color: #222;
+	margin: 4px;
+	padding: 0.5rem 1rem;
+	border-radius: 0.4em;
 }
 .tasks > p {
-  margin: 0;
+	margin: 0;
 }
 .tasks .day {
-  font-size: 12px;
-  margin-left: 1em;
+	font-size: 12px;
+	margin-left: 1em;
 }
 .tasks p.close {
-  font-size: 1.4rem;
-  margin: 0 0 0.2rem 0.8rem;
-  cursor: pointer;
+	font-size: 1.4rem;
+	margin: 0 0 0.2rem 0.8rem;
+	cursor: pointer;
 }
