@@ -15,14 +15,19 @@ export default class AddTodo extends Component {
 	onSubmit = (e) => {
 		e.preventDefault()
 		alert(this.state.title)
+		this.setState({ title: '' })
 	}
 	render() {
 		// const v = this.state.title
 		return (
 			<div>
 				<form onSubmit={this.onSubmit}>
-					<input type='text' onChange={this.handleChange} />
-					<button>Button</button>
+					<input
+						type='text'
+						value={this.state.title}
+						onChange={this.handleChange}
+					/>
+					<button type='submit'>Button</button>
 				</form>
 			</div>
 		)
