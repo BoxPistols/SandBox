@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import List from './List'
 import AddTodo from './AddTodo'
+import List from './List'
+import css from './Todos.module.scss'
 
 export class Todos extends Component {
 	constructor(props) {
@@ -14,12 +15,16 @@ export class Todos extends Component {
 			nextId: 0,
 		}
 	}
+	/**
+     * todo list dummy data
+     * add this.state from List ( map obj method)
+    */
 	render() {
 		return (
-			<div className='Todos'>
-				<h1>Todo App</h1>
-				<AddTodo />
+			<div className={css.Todos}>
+				<h1>Todos App</h1>
 				<List todos={this.state.todos} />
+				<AddTodo />
 			</div>
 		)
 	}
