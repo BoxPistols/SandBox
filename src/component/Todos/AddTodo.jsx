@@ -14,8 +14,8 @@ export default class AddTodo extends Component {
 	}
 	onSubmit = (e) => {
 		e.preventDefault()
-		alert(this.state.title)
 		this.setState({ title: '' })
+		this.props.setTodo(this.state.title)
 	}
 	render() {
 		// const v = this.state.title

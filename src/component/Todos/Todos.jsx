@@ -16,15 +16,20 @@ export class Todos extends Component {
 		}
 	}
 	/**
-     * todo list dummy data
+     * TODO! replace dummy data
      * add this.state from List ( map obj method)
     */
+	addTodo = () => {
+		this.setState({
+			todos: [ ...this.state.todos, { id: 100, title: 'xxxx' } ],
+		})
+	}
 	render() {
 		return (
 			<div className={css.Todos}>
 				<h1>Todos App</h1>
 				<List todos={this.state.todos} />
-				<AddTodo />
+				<AddTodo setTodo={this.addTodo} />
 			</div>
 		)
 	}
