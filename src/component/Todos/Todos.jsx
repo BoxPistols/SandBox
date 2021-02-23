@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import AddTodo from './AddTodo'
 import List from './List'
+import PushTest from './PushTest'
 import css from './Todos.module.scss'
 
 export class Todos extends Component {
@@ -13,6 +14,7 @@ export class Todos extends Component {
 				// { id: 2, title: 'title-3' },
 			],
 			nextId: 0,
+			text: 'Default Text',
 		}
 	}
 	/**
@@ -28,12 +30,19 @@ export class Todos extends Component {
 			nextId: this.state.nextId + 1,
 		})
 	}
+	addPush = () => {
+		this.setState({
+			text: 'AAAAA',
+		})
+	}
 	render() {
 		return (
 			<div className={css.Todos}>
 				<h1>Todos App</h1>
 				<List todos={this.state.todos} />
 				<AddTodo setTodo={this.addTodo} />
+				<PushTest setText={this.addPush} />
+				<h2>Text: {this.state.text}</h2>
 			</div>
 		)
 	}
